@@ -1,10 +1,10 @@
 import express from "express";
 import pg from "pg";
-
+import dotenv from "dotenv";
 
 //Instance
 const app = express();
-
+dotenv.config();
 
 
 const db = new pg.Client({
