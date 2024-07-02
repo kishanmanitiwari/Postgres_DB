@@ -65,6 +65,7 @@ app.get("/", async (req, res) => {
       await nextQuestion();
       console.log(currentQuestion);
       res.render("index.ejs", { question: currentQuestion });
+      db.end();
     }
   } catch (err) {
     console.error("Error fetching data from database:", err);
