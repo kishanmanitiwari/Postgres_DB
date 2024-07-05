@@ -1,11 +1,10 @@
-
-import {Client} from 'pg';
+import pg from 'pg';
 import dotenv from "dotenv";
 
 
 dotenv.config();
 
-const db = new Client(
+const db = new pg.Client(
     {
         user: process.env.DB_USER,
         host: process.env.DB_HOST,
@@ -24,4 +23,16 @@ async function connect() {
     }
 }
 
-export {db,connect};
+async function disconnect() {
+    try {
+        await db.end();
+        console.log('Disconnected from DB');
+    } catch (error) {
+        console.log('Connection error',err.stack);
+    }
+}
+
+
+
+export {db,connect,disconnect};
+export default db;
