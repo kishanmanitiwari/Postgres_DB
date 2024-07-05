@@ -1,0 +1,8 @@
+ASC
+DSC
+LIMIT
+LIKE '%a' - Pattern Matching
+as keyword - Alias - Alternatve Names (Optional) - But recommend
+IF keyword
+Exist keyword
+RETURNING
