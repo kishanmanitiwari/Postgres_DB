@@ -1,8 +1,8 @@
 ASC
-DSC
+DESC
 LIMIT
-LIKE '%a' - Pattern Matching
+LIKE '%a' - Pattern Matching 
 as keyword - Alias - Alternatve Names (Optional) - But recommend
-IF keyword
-Exist keyword
+IF 
+EXISTS 
 RETURNING
