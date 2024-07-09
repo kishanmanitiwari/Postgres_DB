@@ -2,29 +2,29 @@
 
 -- 1. Deleting Records
 
-To delete records from a table, use the `DELETE` statement.
+--To delete records from a table, use the `DELETE` statement.
 
 --# 1.1 Syntax
 
-DELETE FROM table_name
-WHERE condition;
+DELETE FROM employees
+WHERE id = 1;
 
 --# 1.2 Example
-Delete a student with the id `123` from the `students` table:
+--Delete a employee with the id `1` from the `employee` table:
 
 DELETE FROM students
 WHERE id = 123;
 
 --# 1.3 Delete All Records
 
-Delete all records from the `students` table without deleting the table itself:
+--Delete all records from the `employees` table without deleting the table itself:
 
-DELETE FROM students;
+DELETE FROM employees
 
 
 -- 2. Dropping a Table
 
-To drop a table, use the `DROP TABLE` statement.
+--To drop a table, use the `DROP TABLE` statement.
 
 --# 2.1 Syntax
 
@@ -32,9 +32,9 @@ DROP TABLE table_name;
 
 --# 2.2 Example
 
---Drop a table named `courses`: (Omit the WHERE clause)
+--Drop a table named `employees`: (Omit the WHERE clause)
 
-DROP TABLE courses;
+DROP TABLE employees;
 
 --# 2.3 Drop Table If Exists
 
@@ -65,6 +65,9 @@ DROP DATABASE IF EXISTS school_db;
 
 
 -- Important Notes
+
 1. --Deleting Records: Always use the `WHERE` clause to specify which records to delete. Omitting the `WHERE` clause will delete all records in the table.
+
 2. --Dropping a Table: Dropping a table deletes the table and all the data within it permanently. This action cannot be undone.
+
 3. --Dropping a Database: Dropping a database deletes the database and all its objects (tables, indexes, etc.) permanently. This action cannot be undone.
